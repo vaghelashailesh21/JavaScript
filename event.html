@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling in Javascript</title>
+</head>
+<body>
+    <!-- create a toggle button that changes the screen to dark mode when clicked and light mode when clicked again. -->
+   <center><button id="myBtn">Change Mode</button></center> 
+   <p>What Are Events?</p>
+   <p>Events are user or browser-triggered actions—like clicks, key presses, input changes, or page loads—that JavaScript can respond to.</p>
+    <p>Event Handling in JavaScript</p>
+    <p>Event handling in JavaScript involves detecting and responding to events that occur within the web page. This is typically done using event listeners, which are functions that are called when a specific event occurs on a particular element.</p>
+    <p>Common Events in JavaScript</p>
+    <ul>
+        <li>click: Triggered when an element is clicked.</li>
+        <li>mouseover: Triggered when the mouse pointer moves over an element.</li>
+        <li>mouseout: Triggered when the mouse pointer moves out of an element.</li>
+        <li>keydown: Triggered when a key is pressed down.</li>
+        <li>keyup: Triggered when a key is released.</li>
+        <li>load: Triggered when the page or an image has fully loaded.</li>
+        <li>submit: Triggered when a form is submitted.</li>
+    </ul>
+    <p>Adding Event Listeners</p>
+    <p>To handle events in JavaScript, you can use the addEventListener method to attach an event listener to an element. The syntax is as follows:</p>
+    <pre>
+element.addEventListener('event', function);
+
+    </pre>
+    <p>Example: Click Event</p>
+    <pre>
+document.getElementById('myButton').addEventListener('click', function() {
+    alert('Button clicked!');           
+});
+    </pre>
+    <p>In this example, when the button with the ID myButton is clicked, an alert box will appear with the message "Button clicked!".</p>
+    <p>Event Propagation</p>
+    <p>Event propagation refers to the order in which events are received on the page. There are two main phases of event propagation: capturing and bubbling. By default, event listeners are set to listen during the bubbling phase.</p>
+    <p>Preventing Default Behavior</p>
+    <p>Some events have default behaviors associated with them (e.g., clicking a link navigates to a new page). You can prevent these default behaviors using the preventDefault method within your event handler.</p>
+    <p>Example: Preventing Default Behavior</p>
+    <pre>
+document.getElementById('myLink').addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Link click prevented!');
+});
+    </pre>
+    <p>In this example, clicking the link with the ID myLink will not navigate to a new page; instead, it will show an alert message.</p>
+    <p>Conclusion</p>
+    <p>Event handling is a crucial aspect of JavaScript programming that allows developers to create interactive web applications. By understanding how to work with events, you can enhance user experience and build dynamic web pages.</p>
+<script src="event.js"></script>
+</body>
+</html>
